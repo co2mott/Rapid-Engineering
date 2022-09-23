@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="logorapidengineering.png" />
+    <None Remove="RAPIDGRIJS2.png" />
+    <None Remove="RAPIDGRIJSLOGO.png" />
+    <None Remove="rapid_logo_zonder_streepje.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="logorapidengineering.png" />
+    <Resource Include="RAPIDGRIJS2.png" />
+    <Resource Include="RAPIDGRIJSLOGO.png" />
+    <Resource Include="rapid_logo_zonder_streepje.png" />
+  </ItemGroup>
+
+</Project>

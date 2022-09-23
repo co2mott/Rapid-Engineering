@@ -12,6 +12,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Media.Media3D;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
@@ -86,6 +87,7 @@ namespace WpfLoginRapiD
         }
 
         private void button_clear_Click(object sender, RoutedEventArgs e)
+
         {
             txt_Username.Clear();
             txt_Password.Clear();
@@ -97,7 +99,15 @@ namespace WpfLoginRapiD
         {
 
             {
-                System.Windows.Application.Current.Shutdown();
+                //System.Windows.Application.Current.Shutdown();
+                MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
+                if (messageBoxResult == MessageBoxResult.Yes)
+                    System.Windows.Application.Current.Shutdown();
+
+                else
+                    this.Hide();
+   
+
             }
         }
 
